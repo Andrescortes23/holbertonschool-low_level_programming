@@ -30,7 +30,7 @@ int main(void)
 
 	{
 		printf(" is");
-	}
+
 
 	if (l > 5)
 	{
@@ -43,6 +43,7 @@ int main(void)
 	else if (l < 6)
 	{
 		printf(" %d and is less than 6 and not 0\n", l);
+	}
 	}
 
 
