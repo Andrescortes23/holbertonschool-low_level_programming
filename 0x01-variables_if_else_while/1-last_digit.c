@@ -28,17 +28,21 @@ int main(void)
 		printf(" %d", n);
 	}
 
+	{
+		printf(" is");
+	}
+
 	if (l > 5)
 	{
-		printf(" is %d and is greater than 5\n", l);
+		printf(" %d and is greater than 5\n", l);
 	}
 	else if (l == 0)
 	{
-		printf(" is %d and is 0\n", l);
+		printf(" %d and is 0\n", l);
 	}
 	else if (l < 6)
 	{
-		printf(" is %d and is less than 6 and not 0\n", l);
+		printf(" %d and is less than 6 and not 0\n", l);
 	}
 
 
