@@ -21,20 +21,24 @@ int main(void)
 	l = n % 10;
 
 	{
-		printf("The last digit of %d is %d", n, l);
+		printf("The last digit of");
+	}
+
+	{
+		printf(" %d", n);
 	}
 
 	if (l > 5)
 	{
-		printf(" and is greater than 5\n");
+		printf(" is %d and is greater than 5\n", l);
 	}
 	else if (l == 0)
 	{
-		printf(" and is 0\n");
+		printf(" is %d and is 0\n", l);
 	}
 	else if (l < 6)
 	{
-		printf(" and is less than 6 and not 0\n");
+		printf(" is %d and is less than 6 and not 0\n", l);
 	}
 
 
