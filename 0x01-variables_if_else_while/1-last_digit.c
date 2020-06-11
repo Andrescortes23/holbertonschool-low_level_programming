@@ -20,7 +20,7 @@ int main(void)
 
 	l = n % 10;
 
-		printf("The last digit of");
+		printf("Last digit of");
 
 		printf(" %d", n);
 
