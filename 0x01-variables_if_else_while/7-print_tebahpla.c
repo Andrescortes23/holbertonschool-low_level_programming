@@ -7,13 +7,13 @@
 #include <stdio.h>
 
 int main(void)
-{
-	char x = 'a';
 
-	for (x = 'a'; x <= 'z'; x--)
+{
+	char x;
+
+	for (x = 'z'; x >= 'a'; x = x - 1)
 	{
 		putchar (x);
-		x++;
 	}
 	putchar ('\n');
 
