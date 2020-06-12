@@ -7,17 +7,19 @@
 #include <stdio.h>
 
 int main(void)
+
 {
-	char x = 'a';
+	char alp;
 
-	while (x <= 'z');
-	if (x != 'q')
+	for (alp = 'a'; alp <= 'z'; alp++)
 	{
-		putchar (x);
-		x++;
+		if (alp != 'q' && alp != 'e')
+		{
+			putchar (alp);
+		}
 	}
-
 	putchar ('\n');
+
 
 	return (0);
 }
