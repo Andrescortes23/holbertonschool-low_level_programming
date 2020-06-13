@@ -12,7 +12,7 @@ int main(void)
 
 	char Z;
 
-	for (Z = 0; Z <= 99; Z++)
+	for (Z = 0; Z <= 98; Z++)
 
 	{
 		putchar ((Z / 10) + '0');
@@ -20,6 +20,7 @@ int main(void)
 		putchar (',');
 		putchar (' ');
 	}
+	putchar (('9') + '9');
 	putchar ('\n');
 	return (0);
 }
