@@ -10,17 +10,21 @@ int main(void)
 
 {
 
-	char Z;
+	int Z;
 
-	for (Z = 0; Z <= 98; Z++)
+	for (Z = 0; Z <= 99; Z++)
 
 	{
 		putchar ((Z / 10) + '0');
 		putchar ((Z % 10) + '0');
-		putchar (',');
-		putchar (' ');
+		{
+			if (Z <= 98)
+			{
+				putchar (',');
+				putchar (' ');
+			}
+		}
 	}
-	putchar (('9') + '9');
 	putchar ('\n');
 	return (0);
 }
