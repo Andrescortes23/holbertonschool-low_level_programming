@@ -12,13 +12,16 @@ int main(void)
 
 	char cero;
 
-	for (cero = '0'; cero <= '8'; cero++)
-
+	for (cero = '0'; cero <= '9'; cero++)
 	{
 		putchar (cero);
-		putchar (',');
-		putchar (' ');
+
+		if (cero < '9')
+		{
+			putchar (',');
+			putchar (' ');
+		}
 	}
-	putchar (57);
+	putchar ('\n');
 	return (0);
 }
