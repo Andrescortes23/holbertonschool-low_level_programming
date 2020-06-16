@@ -1,9 +1,1 @@
-#ifndef Holberton
-#define Holberton
-
-#include <unistd.h>
-
-int _putchar;
-
-
-#endif
+int _putchar(char c);
