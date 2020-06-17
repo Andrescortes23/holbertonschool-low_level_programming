@@ -10,6 +10,6 @@ int print_last_digit(int oxy)
 	oxy = oxy % 10;
 	if (oxy < 0)
 		oxy = -oxy;
-	_putchar ('0');
+	_putchar ('0' + oxy);
 	return (oxy);
 }
