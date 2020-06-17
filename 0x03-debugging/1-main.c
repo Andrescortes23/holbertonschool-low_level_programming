@@ -17,9 +17,7 @@ int main(void)
         {
                 putchar(i);
         }
-	/**
-	 *You need to add i++ to i become gigher than 10 and the loop ends
-	 */
+	printf("You need to add i++ to i become gigher than 10 and the loop ends\n");
         printf("Infinite loop avoided! \\o/\n");
 
         return (0);
