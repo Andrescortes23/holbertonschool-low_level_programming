@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
- *
- *
+ *more_numbers - more
+ *Return: 0
  */
 void more_numbers(void)
 {
