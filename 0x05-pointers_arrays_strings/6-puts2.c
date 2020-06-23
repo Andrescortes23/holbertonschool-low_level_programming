@@ -14,9 +14,5 @@ void puts2(char *str)
 		_putchar(str[b]);
 		b += 2;
 	}
-
-	if (b > 8)
-	{
-		_putchar('\n');
-	}
+	_putchar('\n');
 }
