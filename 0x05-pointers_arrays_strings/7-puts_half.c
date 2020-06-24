@@ -15,7 +15,7 @@ void puts_half(char *str)
 		den++;
 	}
 
-	mitad = (den) / 2;
+	mitad = (den + 1) / 2;
 
 	while (str[mitad] != '\0')
 	{
