@@ -23,7 +23,7 @@ char *_strncat(char *dest, char *src, int n)
 	for (c = 0; c < b; c++)
 	{
 		*(dest + a) = *(src + c);
-		c++;
+		a++;
 	}
 	return (dest);
 }
