@@ -1,9 +1,9 @@
 #include "holberton.h"
 /**
- *
- *
- *
- *
+ *_strcat - concatenate
+ *@dest: char
+ *@src: char
+ *Return: dest
  */
 char *_strcat(char *dest, char *src)
 {
