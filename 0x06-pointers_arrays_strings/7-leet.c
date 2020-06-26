@@ -11,14 +11,14 @@ char *leet(char *s)
 	int a;
 	int b;
 
-	for (a = 0; *(s + a); a++)
+	for (a = 0; s[a]; a++)
 	{
-		for (b = 0; *(let + b); b++)
+		for (b = 0; let[b]; b++)
 		{
-			if (*(s + a) == *(let + b))
-				{
-					*(s + a) = *(num + b);
-				}
+			if (s[a] == let[b])
+			{
+				s[a] = num[b];
+			}
 		}
 	}
 	return (s);
