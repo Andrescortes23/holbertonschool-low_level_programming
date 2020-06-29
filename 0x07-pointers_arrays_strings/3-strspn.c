@@ -1,9 +1,8 @@
 #include "holberton.h"
 /**
- *
- *
- *
- *
+ *prefix - to search the prefix of the string
+ *@s: string to scan
+ *Return: b
  */
 int prefix(char *s)
 {
@@ -20,10 +19,10 @@ int prefix(char *s)
 
 
 /**
- *
- *
- *
- *
+ *_strspn - to get the length
+ *@s: string to scan
+ *@accept: string to find
+ *Return: zilo
  */
 unsigned int _strspn(char *s, char *accept)
 {
