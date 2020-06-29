@@ -33,7 +33,7 @@ unsigned int _strspn(char *s, char *accept)
 	{
 		for (w = 0; w < tom; w++)
 		{
-			if (accept[q] == s[w])
+			if (s[w] == accept[q])
 			{
 				zilo++;
 			}
