@@ -1,9 +1,9 @@
 #include "holberton.h"
 /**
- *
- *
- *
- *
+ *slad - to find char
+ *@s: string to scan
+ *@c: char to find
+ *Return:
  */
 char *slad(char *s, char c)
 {
@@ -17,10 +17,10 @@ char *slad(char *s, char c)
 }
 
 /**
- *
- *
- *
- *
+ *_strstr - search for a byte
+ *@haystack: string to scan
+ *@needle: substring to match
+ *Return: haystack
  */
 char *_strstr(char *haystack, char *needle)
 {
