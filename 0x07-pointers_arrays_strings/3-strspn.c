@@ -1,20 +1,19 @@
 #include "holberton.h"
 /**
- *prefix - to search the prefix of the string
+ *prefix - to search char in a string
  *@s: string to scan
+ *@c: char to find
  *Return: b
  */
-int prefix(char *s)
+char *prefix(char *s, char c)
 {
-	int a = 0;
-	int b = 0;
-
-	while (s[a] != '\n' && s[a] != ',' && s[a] != '.')
+	while (*s)
 	{
+		if (*s == c)
+			return (s);
 		s++;
-		b++;
 	}
-	return (b);
+	return ('\0');
 }
 
 
@@ -26,18 +25,12 @@ int prefix(char *s)
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	int zilo = 0, q, w;
-	int tom = prefix(s), ate = prefix(accept);
+	int zulu = 0;
 
-	for (q = 0; q < ate; q++)
+	while (*s && prefix(accept, *s))
 	{
-		for (w = 0; w < tom; w++)
-		{
-			if (s[w] == accept[q])
-			{
-				zilo++;
-			}
-		}
+		zulu++;
+		s++;
 	}
-	return (zilo);
+	return (zulu);
 }
