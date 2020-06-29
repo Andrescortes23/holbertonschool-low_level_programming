@@ -3,7 +3,7 @@
  *slad - to find char
  *@s: string to scan
  *@c: char to find
- *Return:
+ *Return: s
  */
 char *slad(char *s, char c)
 {
