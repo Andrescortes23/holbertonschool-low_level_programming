@@ -1,8 +1,9 @@
 #include "holberton.h"
 /**
- *
- *
- *
+ *_strstr - find first ocurrence
+ *@haystack: string to search
+ *@needle: substring
+ *Return: 0 or a
  */
 char *_strstr(char *haystack, char *needle)
 {
