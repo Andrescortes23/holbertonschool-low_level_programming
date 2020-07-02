@@ -1,16 +1,16 @@
 #include "holberton.h"
 /**
- *div - return the multiplication of a
+ *mult - return the multiplication of a
  *@a: tu multiplicate
  *@b: result
  *Return: 0
  */
-int div(int a, int b)
+int mult(int a, int b)
 {
-	if (a > b)
-		return (-1);
+	if ((a * a) == b)
+		return (a);
 	a++;
-	return (div(a, b));
+	return (mult(a, b));
 }
 
 /**
@@ -18,10 +18,11 @@ int div(int a, int b)
  *@n: numb
  *Return: 0
  */
-int_sqrt_recursion(int n)
+int _sqrt_recursion(int n)
 {
+	int a = 2;
 
 	if (n == 1)
 		return (1);
-	return (div(a, n));
+	return (mult(a, n));
 }
