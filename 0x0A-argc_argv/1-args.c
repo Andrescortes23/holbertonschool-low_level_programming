@@ -3,7 +3,7 @@
  *main - program to print number of arguments
  *@argc: Number of arguments
  *@argv: array of pointers with size argc
- *Return 0
+ *Return: 0
  */
 int main(int argc, char *argv[])
 {
