@@ -4,7 +4,7 @@
  *main - Print the result of addition of numbers
  *@argc: Number of arguments
  *@argv: Array of pointers with size argc
- *Return 0 or 1
+ *Return: 0 or 1
  */
 int main(int argc, char *argv[])
 {
@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 
 	for (index = 0; index < argc; index++)
 	{
-		if (atoi (argv[index]) >= 0 && atoi (argv[index]) <= 9)
+		if (atoi(argv[index]) >= 0 && atoi(argv[index]) <= 9)
 		{
 			printf("Error\n");
 			return (1);
