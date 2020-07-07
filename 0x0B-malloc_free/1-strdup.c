@@ -8,13 +8,17 @@ char *_strdup(char *str)
 {
 	char *omy;
 	int uva;
+	int sostr;
 
 	if (str == NULL)
 		return (NULL);
-	omy = malloc(sizeof(char) * *str + 1);
+	for (sostr = 0; str[sostr] != '\0'; sostr++)
+	{
+	}
+	omy = malloc(sizeof(char) * sostr);
 	if (omy == NULL)
 		return (NULL);
-	for (uva = 0; uva < *str; uva++)
+	for (uva = 0; uva < sostr; uva++)
 		omy[uva] = str[uva];
 	return (omy);
 }
