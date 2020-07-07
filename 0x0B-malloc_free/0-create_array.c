@@ -1,10 +1,9 @@
 #include <stdlib.h>
 /**
- *
- *
- *
- *
- *
+ *create_array - to an array of chars
+ *@size: size of our array
+ *@c: the char of our array
+ *Return: NULL or the array in heap
  */
 char *create_array(unsigned int size, char c)
 {
