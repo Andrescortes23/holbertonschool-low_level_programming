@@ -11,7 +11,7 @@ char *_strdup(char *str)
 
 	if (str == NULL)
 		return (NULL);
-	omy = malloc(sizeof(char) * *str);
+	omy = malloc(sizeof(char) * *str + 1);
 	if (omy == NULL)
 		return (NULL);
 	for (uva = 0; uva < *str; uva++)
