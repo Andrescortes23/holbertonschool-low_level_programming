@@ -20,16 +20,19 @@ char *str_concat(char *s1, char *s2)
 	{
 	}
 	s3 = malloc(sizeof(char) * (sizbet + sizhol + 1));
-	if (s3 == NULL)
+	if (s3 != NULL)
+	{
+		for (bet = 0; s1[bet] != '\0'; bet++)
+		{
+			s3[bet] = s1[bet];
+		}
+		for (hol = 0; s2[hol] != '\0'; hol++, bet++)
+		{
+			s3[bet] = s2[hol];
+		}
+		s3[bet] = '\0';
+		return (s3);
+	}
+	else
 		return (NULL);
-	for (bet = 0; s1[bet] != '\0'; bet++)
-	{
-		s3[bet] = s1[bet];
-	}
-	for (hol = 0; s2[hol] != '\0'; hol++, bet++)
-	{
-		s3[bet] = s2[hol];
-	}
-	s3[bet] = '\0';
-	return (s3);
 }
