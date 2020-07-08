@@ -18,7 +18,7 @@ char *str_concat(char *s1, char *s2)
 	for (sizhol = 0; s2[sizhol] != '\0'; sizhol++)
 	{
 	}
-	s3 = malloc(sizeof(char) * (sizbet + sizhol) + 1);
+	s3 = malloc(sizeof(char) * (sizbet + sizhol + 1));
 	if (s3 == NULL)
 		return (NULL);
 	for (bet = 0; s1[bet] != '\0'; bet++)
