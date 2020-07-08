@@ -10,7 +10,7 @@ char *str_concat(char *s1, char *s2)
 	char *s3;
 	int sizbet, sizhol, bet, hol;
 
-	if (s1 == NULL || s2 == NULL)
+	if (s1 == NULL && s2 == NULL)
 		return (NULL);
 	for (sizbet = 0; s1[sizbet] != '\0'; sizbet++)
 	{
