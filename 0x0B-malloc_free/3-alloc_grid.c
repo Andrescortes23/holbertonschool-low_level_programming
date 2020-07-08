@@ -8,7 +8,7 @@
 int **alloc_grid(int width, int height)
 {
 	int **moby;
-	int lex, luth, way, ne;
+	int lex, luth;
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
@@ -22,14 +22,8 @@ int **alloc_grid(int width, int height)
 		{
 			for(luth = 0; moby[luth]; luth++)
 				free(moby[luth]);
-			free(moby);
 			return (NULL);
 		}
-	}
-	for (way = 0; way < height; way++)
-	{
-		for (ne = 0; ne < width; ne++)
-			moby[way][ne] = 0;
 	}
 	return (moby);
 }
