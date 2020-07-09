@@ -24,8 +24,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	if (b > n)
 		b = n;
-	if (n >= b)
-		n = b;
 
 	tylon = malloc(sizeof(char) * (a + b + 1));
 	if (tylon == NULL)
@@ -33,7 +31,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	for (c = 0; s1[c] != '\0'; c++)
 		tylon[c] = s1[c];
-	for (; b != 0; c++, d++, b--)
+	for (; d < b; c++, d++)
 		tylon[c] = s2[d];
 	tylon[c] = '\0';
 	return (tylon);
