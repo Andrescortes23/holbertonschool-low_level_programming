@@ -1,8 +1,8 @@
 #include <stdlib.h>
 /**
- *
- *
- *
+ *len - to know the len of string
+ *@s: - string
+ *Return: the len
  */
 int len(char *s)
 {
