@@ -24,7 +24,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	if (b > n)
 		b = n;
-	if (n > b)
+	if (n >= b)
 		n = b;
 
 	tylon = malloc(sizeof(char) * (a + b + 1));
