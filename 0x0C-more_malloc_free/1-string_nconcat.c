@@ -23,18 +23,21 @@ int len(char *s)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *s3;
-	unsigned int s2len, c, d;
+	unsigned int s1len, s2len, c, d;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
 
+	s1len = len(s1);
 	s2len = len(s2);
 	if (s2len > n)
 		s2len = n;
+	if (n > s2len)
+		n = s2len;
 
-	s3 = malloc(sizeof(char) * (len(s1) + s2len + 1));
+	s3 = malloc(sizeof(char) * (s1len + s2len + 1));
 	if (s3 == NULL)
 		return (NULL);
 
