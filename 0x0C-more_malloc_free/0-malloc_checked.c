@@ -1,4 +1,6 @@
 #include <stdlib.h>
+#include "holberton.h"
+#include <stdio.h>
 /**
  *malloc_checked - allocates memory
  *@b: size of memory
@@ -6,13 +8,13 @@
  */
 void *malloc_checked(unsigned int b)
 {
-	void *magno;
+	void *p;
 
-	magno = malloc(b);
+	p = malloc(b);
 
-	if (!magno)
+	if (p == NULL)
 	{
 		exit(98);
 	}
-	return (magno);
+	return (p);
 }
