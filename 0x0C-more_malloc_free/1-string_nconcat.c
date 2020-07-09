@@ -6,10 +6,13 @@
  */
 int len(char *s)
 {
-	unsigned int index, counter;
+	unsigned int counter;
 
-	for (index = 0; s[index] != '\0'; index++)
+	while (*s != '\0')
+	{
 		counter++;
+		s++;
+	}
 	return (counter);
 }
 
@@ -23,7 +26,7 @@ int len(char *s)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *s3;
-	unsigned int s1len, s2len, c, e;
+	unsigned int s1len, s2len, c, e, f;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -41,16 +44,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s3 == NULL)
 		return (NULL);
 
-	e = 0;
-	for (c = 0; s1[c]; c++, e++)
+	c = 0;
+	for (e = 0; s1[e]; c++, e++)
 		s3[c] = s1[e];
-	while (s2len != 0)
-	{
-		s3[c] = *s2;
-		c++;
-		s2++;
-		s2len--;
-	}
+	for (f = 0; f < s2len; c++, f++)
+		s3[c] = s2[f];
 	s3[c] = '\0';
 	return (s3);
 }
