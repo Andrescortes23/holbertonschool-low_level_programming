@@ -9,7 +9,7 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *s3;
-	unsigned int count1, count2, s1len, s2len, c;
+	unsigned int count1, count2, s1len, s2len, a, b;
 
 	if (s1 == '\0')
 		s1 = "";
@@ -21,28 +21,34 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (count2 = 0; s2[count2] != '\0'; count2++)
 		s2len++;
 
-	if (s2len > n)
-		s2len = n;
+	if (n >= s2len)
+	{
+	s3 = malloc(sizeof(char) * (s1len + s2len) + 1);
 
-	s3 = malloc(sizeof(char) * (s1len + s2len + 1));
 	if (s3 == NULL)
 		return (NULL);
 
-	c = 0;
-	while (*s1)
-	{
-		s3[c] = *s1;
-		c++;
-		s1++;
+	for (a = 0; s1[a] != '\0'; a++)
+		s3[a] = s1[a];
+	for (b = 0; s2[b] != '\0'; b++, a++)
+		s3[a] = s2[b];
+	s3[a] = '\0';
+	return (s3);
 	}
 
-	while (s2len != 0)
+	if (n < s2len)
 	{
-		s3[c] = *s2;
-		c++;
-		s2len--;
-		s2++;
+		s3 = malloc(sizeof(char) * (s1len + n) + 1);
+		if (s3 == NULL)
+			return (NULL);
+
+		for (a = 0; s1[a] != '\0'; a++)
+			s3[a] = s1[a];
+		for (b = 0; b < n; b++, a++)
+			s3[a] = s2[b];
+		s3[a] = '\0';
+		return (s3);
 	}
-	s3[c] = '\0';
-	return (s3);
+	else
+		return (NULL);
 }
