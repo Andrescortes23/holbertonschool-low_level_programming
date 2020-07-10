@@ -8,7 +8,7 @@ int len(char *s)
 {
 	unsigned int counter;
 
-	while (s[counter] != '\0')
+	while (*(s + counter) != '\0')
 	{
 		counter++;
 	}
