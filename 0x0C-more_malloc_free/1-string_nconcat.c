@@ -28,9 +28,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *s3;
 	unsigned int s1len, s2len, c, e, f;
 
-	if (s1 == NULL)
+	if (s1 == '\0')
 		s1 = "";
-	if (s2 == NULL)
+	if (s2 == '\0')
 		s2 = "";
 
 	s1len = len(s1);
