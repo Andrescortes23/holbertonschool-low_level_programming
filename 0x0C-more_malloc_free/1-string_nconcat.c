@@ -1,21 +1,5 @@
 #include <stdlib.h>
 /**
- *len - to know the len of string
- *@s: - string
- *Return: the len
- */
-int len(char *s)
-{
-	unsigned int counter;
-
-	while (*(s + counter) != '\0')
-	{
-		counter++;
-	}
-	return (counter);
-}
-
-/**
  *string_nconcat - concatenate 2 strings
  *@s1: string 1
  *@s2: string 2
@@ -25,15 +9,17 @@ int len(char *s)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *s3;
-	unsigned int s1len, s2len, c;
+	unsigned int count1, count2, s1len, s2len, c;
 
 	if (s1 == '\0')
 		s1 = "";
 	if (s2 == '\0')
 		s2 = "";
 
-	s1len = len(s1);
-	s2len = len(s2);
+	for (count1 = 0; s1[count1] != '\0'; count1++)
+		s1len++;
+	for (count2 = 0; s2[count2] != '\0'; count2++)
+		s2len++;
 
 	if (s2len > n)
 		s2len = n;
