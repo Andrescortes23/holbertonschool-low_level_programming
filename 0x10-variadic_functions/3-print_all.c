@@ -67,7 +67,7 @@ void print_all(const char * const format, ...)
 	};
 
 	va_start(param, format);
-	while (format[index1])
+	while (format && format[index1])
 	{
 		while (elementstype[index2].x)
 		{
