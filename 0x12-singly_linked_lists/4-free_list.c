@@ -8,10 +8,11 @@ void free_list(list_t *head)
 {
 	list_t *willy;
 
-	while (head != '\0')
+	while (head)
 	{
-		willy = head;
+		willy = head->next;
+		free(head->str);
+		free(head);
+		head = (willy);
 	}
-	head = head->next;
-	free(willy);
 }
