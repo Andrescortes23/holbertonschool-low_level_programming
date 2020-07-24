@@ -27,9 +27,3 @@ list_t *add_node_end(list_t **head, const char *str)
 	nodo->str = name;
 	nodo->len = lenname;
 	nodo->next = NULL;
-
-	if (*head == NULL)
-		*head = node;
-	else
-	{
-		while (tmp->next !=NULL)
