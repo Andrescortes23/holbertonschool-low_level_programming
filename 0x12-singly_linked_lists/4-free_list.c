@@ -13,4 +13,5 @@ void free_list(list_t *head)
 		willy = head->next;
 		free(willy);
 		head = willy;
+	}
 }
