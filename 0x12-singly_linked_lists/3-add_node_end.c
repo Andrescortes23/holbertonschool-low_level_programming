@@ -9,10 +9,10 @@
 list_t *add_node_end(list_t **head, const char *str)
 {
 	unsigned int index = 0, lenname;
-	list_t *node, *tmp;
+	list_t *nodo;
 	char *name;
 
-	node = malloc(sizeof(list_t));
+	nodo = malloc(sizeof(list_t));
 	if (nodo == NULL)
 		return (NULL);
 
@@ -26,5 +26,8 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	nodo->str = name;
 	nodo->len = lenname;
-	nodo->next = NULL;
+	nodo->next = *head;
+	*head = nodo;
+
+	return (*head);
 }
