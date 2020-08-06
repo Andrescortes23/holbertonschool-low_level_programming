@@ -7,15 +7,15 @@
  */
 int main(int ac, char *av[])
 {
+	int rfd0 = 0, wfd1 = 0;
+	int *buf;
+	int fd0, fd1;
+
 	if (ac != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-
-	int rfd0 = 0, wfd1 = 0;
-	int *buf;
-	int fd0, fd1;
 
 	fd0 = open(av[1], O_RDONLY);
 	if (fd0 == -1)
