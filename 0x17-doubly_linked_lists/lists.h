@@ -1,7 +1,6 @@
-#ifndef LISTS_H
-#define LISTS_H
+#ifndef _LISTS_H
+#define _LISTS_H
 #include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
 
 /**
@@ -21,3 +20,5 @@ typedef struct dlistint_s
 } dlistint_t;
 
 size_t print_dlistint(const dlistint_t *h);
+
+#endif
