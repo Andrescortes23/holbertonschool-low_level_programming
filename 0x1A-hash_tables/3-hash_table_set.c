@@ -31,7 +31,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 
 	Newnode->key = (strdup(key));
-	if (Newnode-> == NULL)
+	if (Newnode->key == NULL)
 	{
 		free(Newnode);
 		return (0);
