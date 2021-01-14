@@ -6,6 +6,7 @@
  *@value: element to search
  *Return: num of index or -1
  */
+
 int binary_search(int *array, size_t size, int value)
 {
   int left = 0, right = (size - 1), ind;
@@ -19,7 +20,7 @@ int binary_search(int *array, size_t size, int value)
 	    printf("%d, ", array[ind]);
 	  ind = left + (right - left) / 2;
 	  if (array[ind] == value)
-	    return (ind)
+	    return (ind);
 	  if (array[ind] < value)
 	    left = ind + 1;
 	  else
